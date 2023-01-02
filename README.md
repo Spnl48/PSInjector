@@ -14,10 +14,6 @@ Code injection is performed in both user mode and kernel mode. Malware mainly us
 
 • Altering functionality of another process or entire OS
 
-Code Injection Target
-
-Before injecting code, malware must figure out who and where it wants to inject its code. Malware can inject its code into existing processes running on the system, as well as into the kernel. Alternatively, it can create/spawn a new process off itself in a suspended state and inject code into it. For user space, we already know that each process has its own private virtual memory space split into user mode and kernel mode address space. The user-mode space of the virtual memory is tampered by another process, even though it is private to the process. If malware injects code into the user-mode part of any other process, only that process is affected by the malware. Modifying the kernel impacts all processes on the system. But again, injecting into the kernel by adding a kernel module or altering an existing kernel module is not a child’s play. A programmer needs to be extremely careful while playing around with any kernel code, as a small mistake can dramatically impact the system and may lead to a system crash. On the other hand, the kernel is highly protected and not that easy to modify, making it not the most sought-after destination for malware.
-
 
 Steps for Code Injection
 Code injection is largely handled in the following steps.
