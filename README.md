@@ -71,8 +71,5 @@ and check ur listener:
 ![image](https://user-images.githubusercontent.com/68971838/210256969-2ca9869f-7781-4888-88f4-fe7bb5a8b6bc.png)
 
 
-Author: SPNl48 :)))
-
-jenna Ortega fan 
 
 
